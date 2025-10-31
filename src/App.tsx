@@ -2,17 +2,25 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
+import AppLayout from './components/layout/AppLayout';
 
 import './App.css'
 
 function App() {
-  
+
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Dashboard/>}/>
-        <Route path='/transactions' element={<Transactions/>}/>
+        {/* Rotas publicas */}
+        <Route path='login' />
+
+        {/* Rotas privadas */}
+        <Route element={<AppLayout/>}>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/transactions' element={<Transactions />} />
+        </Route>
+
       </Routes>
     </BrowserRouter>
   )

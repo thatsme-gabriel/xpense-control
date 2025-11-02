@@ -13,7 +13,7 @@ export default function Sidebar() {
     ]
     return (
         <aside className="w-64 border-r border-border bg-card flex flex-col">
-            <div className="p-6 text-xl font-semibold">💰 Meu Financeiro</div>
+            <div className="p-6 text-xl font-semibold">Xpense control</div>
 
             <nav className="flex flex-col gap-1 px-2">
                 {navItems.map(({ name, icon: Icon, path }) => (
